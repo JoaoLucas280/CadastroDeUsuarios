@@ -1,6 +1,9 @@
-package com.cadastro.CadastroDeUsuarios;
+package com.cadastro.CadastroDeUsuarios.Usuário;
 
+import com.cadastro.CadastroDeUsuarios.Carros.CarModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -12,6 +15,8 @@ public class UserModel {
     private String nome;
     private String sexo;
     private String hobbie;
+    @OneToMany(mappedBy = "usuarios")
+    private List<CarModel> carros;
 
     public UserModel() {}
 

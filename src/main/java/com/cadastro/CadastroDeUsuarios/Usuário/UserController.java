@@ -1,4 +1,4 @@
-package com.cadastro.CadastroDeUsuarios;
+package com.cadastro.CadastroDeUsuarios.Usuário;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
