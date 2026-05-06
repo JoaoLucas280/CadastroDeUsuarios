@@ -23,5 +23,5 @@ public class CarModel {
 
     @ManyToOne
     @JoinColumn(name = "carros_id")
-    private List<UserModel> usuarios;
+    private UserModel usuarios;
 }

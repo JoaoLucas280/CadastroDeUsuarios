@@ -2,11 +2,17 @@ package com.cadastro.CadastroDeUsuarios.Usuário;
 
 import com.cadastro.CadastroDeUsuarios.Carros.CarModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
+@Data //Cria os getters and setters automaticamente
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserModel {
 
     @Id
@@ -18,35 +24,5 @@ public class UserModel {
     @OneToMany(mappedBy = "usuarios")
     private List<CarModel> carros;
 
-    public UserModel() {}
 
-    public UserModel(String nome, String sexo, String hobbie) {
-        this.nome = nome;
-        this.sexo = sexo;
-        this.hobbie = hobbie;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getHobbie() {
-        return hobbie;
-    }
-
-    public void setHobbie(String hobbie) {
-        this.hobbie = hobbie;
-    }
 }
