@@ -1,6 +1,7 @@
 package com.cadastro.CadastroDeUsuarios.Usuário;
 
 import com.cadastro.CadastroDeUsuarios.Carros.CarModel;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class UserModel {
     private String sexo;
     private String hobbie;
     @OneToMany(mappedBy = "usuarios")
+    @JsonManagedReference
     private List<CarModel> carros;
 
 
